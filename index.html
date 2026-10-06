@@ -341,6 +341,53 @@
     .progress span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #93c5fd, var(--accent)); border-radius: inherit; transition: width 1.4s var(--ease); }
     .progress-label { display: flex; justify-content: space-between; font-size: .78rem; color: var(--slate-light); margin-bottom: 8px; }
 
+
+    /* desktop app cards */
+    .card-app { grid-column: span 6; }
+    .tag-win { background: #eef2ff; color: #3730a3; }
+    .tag-win svg { width: 12px; height: 12px; }
+    .btn-dl { padding: 11px 18px; font-size: .92rem; }
+    .btn-outline { background: var(--surface); color: var(--navy); border-color: var(--border); }
+    .btn-outline:hover { border-color: var(--navy); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+    .btn-outline svg { width: 17px; height: 17px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 0 0 18px; font-size: .8rem; color: var(--slate-light); }
+    .meta span { display: inline-flex; align-items: center; gap: 6px; }
+    .meta span::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: #cbd5e1; }
+    .meta span:first-child::before { display: none; }
+
+    .app-mock {
+      margin: 0 0 22px; height: 150px; position: relative; overflow: hidden;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: linear-gradient(135deg, #eff6ff, #f8fafc);
+      display: flex; align-items: center; justify-content: center; gap: 22px;
+    }
+    /* pomodoro mock */
+    .ring { width: 108px; height: 108px; position: relative; flex: none; }
+    .ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+    .ring .track { stroke: #e2e8f0; }
+    .ring .arc { stroke: var(--accent); stroke-dasharray: 289; stroke-dashoffset: 289; transition: stroke-dashoffset 1.6s var(--ease); }
+    .reveal.visible .ring .arc { stroke-dashoffset: 101; }
+    .ring .time { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; line-height: 1.1; }
+    .ring .time b { font-size: 1.35rem; color: var(--navy); font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+    .ring .time small { display: block; font-size: .64rem; text-transform: uppercase; letter-spacing: .12em; color: var(--accent); font-weight: 700; }
+    .pomo-side { display: grid; gap: 8px; font-size: .78rem; }
+    .pomo-pill { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; display: flex; align-items: center; gap: 8px; color: var(--navy-2); box-shadow: var(--shadow-sm); }
+    .pomo-pill i { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+    .dots { display: flex; gap: 5px; }
+    .dots i { width: 10px; height: 10px; border-radius: 3px; background: #cbd5e1; }
+    .dots i.on { background: var(--accent); }
+    /* gesture mock */
+    .gesture-trail { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .gesture-trail path { stroke-dasharray: 400; stroke-dashoffset: 400; transition: stroke-dashoffset 1.4s var(--ease) .2s; }
+    .reveal.visible .gesture-trail path { stroke-dashoffset: 0; }
+    .gesture-hud {
+      position: absolute; right: 16px; bottom: 14px;
+      background: rgba(15, 23, 42, .92); color: #fff; border-radius: 10px;
+      padding: 8px 12px; font-size: .78rem; box-shadow: var(--shadow-md);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .gesture-hud .arrows { font-size: 1rem; letter-spacing: 2px; color: #93c5fd; }
+
     /* ============================================================
        Strengths
        ============================================================ */
@@ -407,6 +454,7 @@
       .hero-inner { grid-template-columns: 1fr; gap: 48px; }
       .hero-panel { max-width: 560px; }
       .card-featured, .card-utilities { grid-column: span 12; }
+      .card-app { grid-column: span 6; }
       .strengths-grid { grid-template-columns: 1fr 1fr; }
       .strengths-grid .strength:last-child { grid-column: span 2; }
     }
@@ -427,6 +475,7 @@
       .nav-links .nav-cta { margin: 8px 0 0; text-align: center; }
 
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .card-app { grid-column: span 12; }
       .footer-top { grid-template-columns: 1fr 1fr; }
       .footer-top > div:first-child { grid-column: span 2; }
     }
@@ -436,7 +485,8 @@
       .hero { padding: calc(var(--header-h) + 64px) 0 80px; }
       .hero-stats { gap: 24px; }
       .card { padding: 24px; }
-      .card-future { grid-column: span 12; }
+      .card-future, .card-app { grid-column: span 12; }
+      .app-mock { gap: 14px; }
       .pillars { grid-template-columns: 1fr; }
       .strengths-grid { grid-template-columns: 1fr; }
       .strengths-grid .strength:last-child { grid-column: auto; }
@@ -508,7 +558,7 @@
           </div>
 
           <div class="hero-stats">
-            <div><strong>2</strong><span>Browser stores</span></div>
+            <div><strong>3</strong><span>Released apps</span></div>
             <div><strong>AI&nbsp;+&nbsp;ML</strong><span>At the core</span></div>
             <div><strong>Privacy-first</strong><span>Local by design</span></div>
           </div>
@@ -681,6 +731,70 @@
                 Browse projects on GitHub
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
               </a>
+            </div>
+          </article>
+
+          <!-- Ferna Pomoro -->
+          <article class="card card-app reveal">
+            <div class="card-top">
+              <div class="icon-tile" style="width:52px;height:52px;border-radius:14px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6M12 2v3"/></svg>
+              </div>
+              <span class="tag tag-win"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.5v7H3zM11.5 4.4 21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zM11.5 12.5H21V21l-9.5-1.4z"/></svg>Windows 10 / 11</span>
+            </div>
+            <h3>Ferna Pomoro</h3>
+            <p>A Pomodoro timer for Windows that knows when you step away. When the keyboard and mouse go quiet it freezes the session, rewinds to your last activity, and asks whether to remove the gap, count it, or end the session.</p>
+            <div class="app-mock" aria-hidden="true">
+              <div class="ring">
+                <svg viewBox="0 0 108 108"><circle class="track" cx="54" cy="54" r="46" fill="none" stroke-width="8"/><circle class="arc" cx="54" cy="54" r="46" fill="none" stroke-width="8" stroke-linecap="round"/></svg>
+                <div class="time"><div><small>Focus</small><b>16:12</b></div></div>
+              </div>
+              <div class="pomo-side">
+                <div class="pomo-pill"><i style="background:#f59e0b"></i>Idle 4 min — remove?</div>
+                <div class="pomo-pill"><i style="background:#10b981"></i>Today: 2 h 30 m</div>
+                <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+              </div>
+            </div>
+            <div class="meta"><span>v1.1.0</span><span>Installer or portable</span><span>MIT licence</span></div>
+            <ul class="feature-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Smart idle detection with rewind</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Full-screen breaks with eye-rest tips</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Live taskbar progress and daily totals</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Session log, 14-day chart and CSV export</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-primary btn-dl" href="https://github.com/tgi25/ferna-pomoro/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download for Windows</a>
+              <a class="btn btn-outline btn-dl" href="https://github.com/tgi25/ferna-pomoro" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>View on GitHub</a>
+            </div>
+          </article>
+
+          <!-- Ferna Mouse Gestures -->
+          <article class="card card-app reveal" data-delay="1">
+            <div class="card-top">
+              <div class="icon-tile" style="width:52px;height:52px;border-radius:14px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="16" rx="5"/><path d="M12 2v6M7 8h10"/><path d="M3 22c3-1 5-3 6-6"/></svg>
+              </div>
+              <span class="tag tag-win"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.5v7H3zM11.5 4.4 21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zM11.5 12.5H21V21l-9.5-1.4z"/></svg>Windows 10 / 11</span>
+            </div>
+            <h3>Ferna Mouse Gestures</h3>
+            <p>Hold a mouse button, draw a shape, and a shortcut runs — in every Windows app, not just the browser. A live trail and on-screen panel show each stroke and the action it matched.</p>
+            <div class="app-mock" aria-hidden="true">
+              <svg class="gesture-trail" viewBox="0 0 300 150" preserveAspectRatio="xMidYMid meet">
+                <path d="M70 40 L70 110 L200 110" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>
+                <circle cx="70" cy="40" r="5" fill="#2563eb"/>
+              </svg>
+              <div class="gesture-hud"><span class="arrows">↓→</span>Close tab</div>
+            </div>
+            <div class="meta"><span>v1.1.0</span><span>~300 KB native app</span><span>MIT licence</span></div>
+            <ul class="feature-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Straight and diagonal strokes, up to 12 per gesture</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Keyboard shortcuts, window commands and program launch</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Web actions: open links, search selected text</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Pause anytime; skips full-screen apps</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-primary btn-dl" href="https://github.com/tgi25/ferna-mouse-gestures/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download for Windows</a>
+              <a class="btn btn-outline btn-dl" href="https://github.com/tgi25/ferna-mouse-gestures" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>View on GitHub</a>
             </div>
           </article>
 
