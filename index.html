@@ -388,6 +388,31 @@
     }
     .gesture-hud .arrows { font-size: 1rem; letter-spacing: 2px; color: #93c5fd; }
 
+
+    /* video demo button + lightbox */
+    .btn-video { background: #fff; color: var(--navy); border-color: var(--border); }
+    .btn-video:hover { border-color: #ef4444; color: #b91c1c; transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+    .btn-video svg { width: 20px; height: 20px; }
+    .video-modal {
+      position: fixed; inset: 0; z-index: 200; display: none;
+      align-items: center; justify-content: center; padding: 20px;
+      background: rgba(2, 6, 23, .82); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+    }
+    .video-modal.open { display: flex; animation: fadeIn .25s var(--ease); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .video-box { width: min(960px, 100%); }
+    .video-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; color: #e2e8f0; }
+    .video-head h3 { color: #fff; font-size: 1.05rem; margin: 0; }
+    .video-close {
+      width: 40px; height: 40px; border-radius: 10px; flex: none; cursor: pointer;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); color: #fff; font-size: 1.4rem; line-height: 1;
+    }
+    .video-close:hover { background: rgba(255,255,255,.18); }
+    .video-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: #000; box-shadow: 0 30px 60px -20px rgba(0,0,0,.7); }
+    .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .video-foot { margin-top: 10px; font-size: .84rem; text-align: right; }
+    .video-foot a { color: #93c5fd; }
+
     /* ============================================================
        Strengths
        ============================================================ */
@@ -744,12 +769,12 @@
             </div>
             <h3>Ferna Pomoro</h3>
             <p>A Pomodoro timer for Windows that knows when you step away. When the keyboard and mouse go quiet it freezes the session, rewinds to your last activity, and asks whether to remove the gap, count it, or end the session.</p>
-            <div class="app-mock" aria-hidden="true">
-              <div class="ring">
+            <div class="app-mock">
+              <div class="ring" aria-hidden="true">
                 <svg viewBox="0 0 108 108"><circle class="track" cx="54" cy="54" r="46" fill="none" stroke-width="8"/><circle class="arc" cx="54" cy="54" r="46" fill="none" stroke-width="8" stroke-linecap="round"/></svg>
                 <div class="time"><div><small>Focus</small><b>16:12</b></div></div>
               </div>
-              <div class="pomo-side">
+              <div class="pomo-side" aria-hidden="true">
                 <div class="pomo-pill"><i style="background:#f59e0b"></i>Idle 4 min — remove?</div>
                 <div class="pomo-pill"><i style="background:#10b981"></i>Today: 2 h 30 m</div>
                 <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
@@ -764,6 +789,7 @@
             </ul>
             <div class="card-actions">
               <a class="btn btn-primary btn-dl" href="https://github.com/tgi25/ferna-pomoro/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download for Windows</a>
+              <a class="btn btn-video btn-dl" href="https://www.youtube.com/watch?v=VkuLuMMPElY" target="_blank" rel="noopener" data-video="VkuLuMMPElY" data-title="Ferna Pomoro Explainer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8z" fill="#ef4444"/><path d="M9.75 15.3 15.5 12 9.75 8.7z" fill="#fff"/></svg>Watch demo</a>
               <a class="btn btn-outline btn-dl" href="https://github.com/tgi25/ferna-pomoro" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>View on GitHub</a>
             </div>
           </article>
@@ -904,6 +930,18 @@
     </section>
   </main>
 
+  <!-- ==================== VIDEO LIGHTBOX ==================== -->
+  <div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-labelledby="video-title" hidden>
+    <div class="video-box">
+      <div class="video-head">
+        <h3 id="video-title">Video</h3>
+        <button class="video-close" type="button" aria-label="Close video">&times;</button>
+      </div>
+      <div class="video-frame" id="video-frame"></div>
+      <div class="video-foot"><a id="video-yt" href="#" target="_blank" rel="noopener">Open on YouTube &#8599;</a></div>
+    </div>
+  </div>
+
   <!-- ==================== FOOTER ==================== -->
   <footer class="site-footer">
     <div class="container">
@@ -1040,6 +1078,41 @@
       } else {
         revealEls.forEach(revealNow);
       }
+
+      /* ---------- Video lightbox (privacy-enhanced YouTube embed) ---------- */
+      var modal = document.getElementById("video-modal");
+      var frame = document.getElementById("video-frame");
+      var vTitle = document.getElementById("video-title");
+      var vLink = document.getElementById("video-yt");
+      var lastFocus = null;
+      function openVideo(id, title) {
+        lastFocus = document.activeElement;
+        vTitle.textContent = title || "Video";
+        vLink.href = "https://www.youtube.com/watch?v=" + id;
+        frame.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id +
+          '?autoplay=1&rel=0&modestbranding=1" title="' + (title || "YouTube video") +
+          '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+        modal.hidden = false; modal.classList.add("open");
+        document.body.style.overflow = "hidden";
+        modal.querySelector(".video-close").focus();
+      }
+      function closeVideo() {
+        if (!modal.classList.contains("open")) return;
+        modal.classList.remove("open"); modal.hidden = true;
+        frame.innerHTML = "";
+        document.body.style.overflow = "";
+        if (lastFocus) lastFocus.focus();
+      }
+      document.querySelectorAll("[data-video]").forEach(function (a) {
+        a.addEventListener("click", function (e) {
+          if (e.ctrlKey || e.metaKey || e.shiftKey || e.button === 1) return; // allow open-in-new-tab
+          e.preventDefault();
+          openVideo(a.getAttribute("data-video"), a.getAttribute("data-title"));
+        });
+      });
+      modal.addEventListener("click", function (e) { if (e.target === modal) closeVideo(); });
+      modal.querySelector(".video-close").addEventListener("click", closeVideo);
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeVideo(); });
 
       /* ---------- Hero: animated particle network ---------- */
       var canvas = document.getElementById("hero-canvas");
