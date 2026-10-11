@@ -17,7 +17,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Sinhala:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <style>
     /* ============================================================
@@ -53,7 +53,7 @@
     html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); }
     body {
       margin: 0;
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: "Inter", "Noto Sans Sinhala", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 16px;
       line-height: 1.65;
       color: var(--slate);
@@ -413,6 +413,36 @@
     .video-foot { margin-top: 10px; font-size: .84rem; text-align: right; }
     .video-foot a { color: #93c5fd; }
 
+
+    /* wide web-app card (Namakarana) */
+    .card-wide { grid-column: span 12; }
+    .wide-inner { display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center; }
+    .tag-web { background: #fef3c7; color: #92400e; }
+    .tag-web svg { width: 12px; height: 12px; }
+    .si { font-family: "Noto Sans Sinhala", "Inter", sans-serif; }
+    .card-wide h3 .si { font-weight: 700; color: var(--accent); margin-right: 6px; }
+    .credit { font-size: .84rem; color: var(--slate-light); border-left: 3px solid #bfdbfe; padding-left: 12px; margin: 0 0 22px; }
+    .name-mock {
+      background: linear-gradient(135deg, #fff7ed, #eff6ff);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 26px; display: grid; gap: 14px;
+    }
+    .name-form { display: flex; flex-wrap: wrap; gap: 8px; font-size: .78rem; }
+    .name-form span { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; color: var(--navy-2); }
+    .name-form b { color: var(--accent); font-weight: 700; }
+    .name-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; box-shadow: var(--shadow-md); }
+    .name-card + .name-card { opacity: .7; transform: scale(.97); transform-origin: top center; box-shadow: var(--shadow-sm); padding: 12px 20px; }
+    .nc-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+    .nc-name { font-size: 1.6rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+    .nc-roman { font-size: .85rem; color: var(--slate); margin-left: 8px; font-weight: 500; }
+    .nc-gana { font-size: .72rem; font-weight: 700; color: #047857; background: #ecfdf5; border-radius: 999px; padding: 3px 9px; white-space: nowrap; }
+    .syl { display: flex; gap: 6px; margin: 12px 0 10px; }
+    .syl span { display: grid; place-items: center; min-width: 44px; padding: 6px 8px 4px; border-radius: 8px; font-size: .95rem; background: var(--accent-soft); color: var(--accent-dark); line-height: 1.2; }
+    .syl span small { font-family: "Inter", sans-serif; font-size: .62rem; letter-spacing: .06em; text-transform: uppercase; color: var(--slate-light); }
+    .syl span.g { background: var(--navy); color: #fff; }
+    .syl span.g small { color: #93c5fd; }
+    .nc-meaning { font-size: .85rem; color: var(--slate); margin: 0; }
+
     /* ============================================================
        Strengths
        ============================================================ */
@@ -500,6 +530,7 @@
       .nav-links .nav-cta { margin: 8px 0 0; text-align: center; }
 
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .wide-inner { grid-template-columns: 1fr; gap: 28px; }
       .card-app { grid-column: span 12; }
       .footer-top { grid-template-columns: 1fr 1fr; }
       .footer-top > div:first-child { grid-column: span 2; }
@@ -512,6 +543,8 @@
       .card { padding: 24px; }
       .card-future, .card-app { grid-column: span 12; }
       .app-mock { gap: 14px; }
+      .name-mock { padding: 18px; }
+      .nc-name { font-size: 1.35rem; }
       .pillars { grid-template-columns: 1fr; }
       .strengths-grid { grid-template-columns: 1fr; }
       .strengths-grid .strength:last-child { grid-column: auto; }
@@ -583,7 +616,7 @@
           </div>
 
           <div class="hero-stats">
-            <div><strong>3</strong><span>Released apps</span></div>
+            <div><strong>4</strong><span>Released apps</span></div>
             <div><strong>AI&nbsp;+&nbsp;ML</strong><span>At the core</span></div>
             <div><strong>Privacy-first</strong><span>Local by design</span></div>
           </div>
@@ -697,8 +730,7 @@
             </ul>
 
             <div class="card-actions">
-              <!-- TODO: replace href with your exact Chrome Web Store listing URL -->
-              <a class="store-btn" href="https://chromewebstore.google.com/search/Ferna%20Tabs" target="_blank" rel="noopener">
+              <a class="store-btn" href="https://chromewebstore.google.com/detail/ferna-tabs/loocmoejnaaidhfkmigbdeneembjjdap" target="_blank" rel="noopener">
                 <svg viewBox="0 0 48 48" aria-hidden="true">
                   <circle cx="24" cy="24" r="22" fill="#fff" />
                   <path d="M24 24 6.9 14.1A20 20 0 0 1 44 14H24z" fill="#ea4335" />
@@ -709,8 +741,7 @@
                 </svg>
                 <span class="lbl"><small>Available in the</small><b>Chrome Web Store</b></span>
               </a>
-              <!-- TODO: replace href with your exact Firefox Add-ons listing URL -->
-              <a class="store-btn" href="https://addons.mozilla.org/firefox/search/?q=Ferna%20Tabs" target="_blank" rel="noopener">
+              <a class="store-btn" href="https://addons.mozilla.org/en-US/firefox/addon/ferna-tabs/" target="_blank" rel="noopener">
                 <svg viewBox="0 0 48 48" aria-hidden="true">
                   <defs>
                     <linearGradient id="ff" x1="0" y1="0" x2="1" y2="1">
@@ -821,6 +852,63 @@
             <div class="card-actions">
               <a class="btn btn-primary btn-dl" href="https://github.com/tgi25/ferna-mouse-gestures/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download for Windows</a>
               <a class="btn btn-outline btn-dl" href="https://github.com/tgi25/ferna-mouse-gestures" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>View on GitHub</a>
+            </div>
+          </article>
+
+          <!-- Ferna Namakarana -->
+          <article class="card card-wide reveal">
+            <div class="wide-inner">
+              <div>
+                <div class="card-top">
+                  <div class="icon-tile" style="width:52px;height:52px;border-radius:14px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="M13.5 6.5l4 4"/><path d="M16 20h4"/></svg>
+                  </div>
+                  <span class="tag tag-web"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>Web app · runs in your browser</span>
+                </div>
+                <h3><span class="si" lang="si">නාමකරණ</span>Ferna Namakarana</h3>
+                <p>
+                  A Sinhala name studio for choosing a name for a baby or a new business. It suggests new,
+                  pronounceable Sinhala names that begin with the letters you choose, keeps only those whose
+                  syllable pattern falls in an auspicious <em>Gana</em>, and explains each name's meaning and roots.
+                </p>
+                <p class="credit">Based on research by B.H.S. Nilmini and T.G.I. Fernando.</p>
+                <ul class="feature-list">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Names generated in your browser by a small Transformer model</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Rule-based Gana check of every name's syllable weights (Mathra)</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Optional AI meanings and roots from Sinhala, Pali and Sanskrit</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Works without an API key in Transformer-only mode</li>
+                </ul>
+                <div class="card-actions">
+                  <a class="btn btn-primary btn-dl" href="https://tgi25.github.io/namakarana/web/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>Open the web app</a>
+                  <a class="btn btn-outline btn-dl" href="https://github.com/tgi25/namakarana" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>View on GitHub</a>
+                </div>
+              </div>
+
+              <div class="name-mock" aria-hidden="true">
+                <div class="name-form">
+                  <span>Starts with <b class="si">හ</b></span>
+                  <span>Gender <b>Girl</b></span>
+                  <span>Gana <b>Auspicious only</b></span>
+                </div>
+                <div class="name-card">
+                  <div class="nc-top">
+                    <div><span class="nc-name si" lang="si">හිරුණි</span><span class="nc-roman">Hiruni</span></div>
+                    <span class="nc-gana">✓ Na gana</span>
+                  </div>
+                  <div class="syl">
+                    <span class="si">හි<small>short</small></span>
+                    <span class="si">රු<small>short</small></span>
+                    <span class="si">ණි<small>short</small></span>
+                  </div>
+                  <p class="nc-meaning">Radiant like the sun — from <span class="si">හිරු</span> (sun)</p>
+                </div>
+                <div class="name-card">
+                  <div class="nc-top">
+                    <div><span class="nc-name si" lang="si" style="font-size:1.1rem">හසිනි</span><span class="nc-roman">Hasini</span></div>
+                    <span class="nc-gana">✓ Auspicious</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </article>
 
