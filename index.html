@@ -443,6 +443,36 @@
     .syl span.g small { color: #93c5fd; }
     .nc-meaning { font-size: .85rem; color: var(--slate); margin: 0; }
 
+
+    /* Ferna PDF Reader wide card */
+    .wide-inner.rev { grid-template-columns: 1fr 1fr; align-items: start; }
+    .wide-inner.rev .shots { margin-top: 6px; display: grid; gap: 14px; }
+    .shot-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .card-icon-img { width: 52px; height: 52px; border-radius: 14px; box-shadow: var(--shadow-sm); }
+    .tag-new { background: #cffafe; color: #0e7490; }
+    .shot {
+      display: block; border-radius: var(--radius); overflow: hidden;
+      border: 1px solid var(--border); box-shadow: var(--shadow-md);
+      transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+    }
+    .shot:hover { transform: translateY(-3px) scale(1.01); box-shadow: var(--shadow-lg); }
+    .shot img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+    .browsers { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 18px; }
+    .browsers span { font-size: .76rem; font-weight: 600; color: var(--navy-2); background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: 4px 10px; }
+    .btn-tiktok { background: var(--navy); color: #fff; border-color: var(--navy); }
+    .btn-tiktok:hover { background: #000; transform: translateY(-2px); box-shadow: 0 10px 20px -10px rgba(0,0,0,.6); }
+    .btn-tiktok svg { width: 17px; height: 17px; }
+    .store-soon {
+      display: inline-flex; align-items: center; gap: 12px; margin-top: 14px;
+      padding: 10px 16px 10px 12px; border-radius: 12px;
+      border: 1px dashed #cbd5e1; background: var(--bg); color: var(--slate); cursor: default;
+    }
+    .store-soon svg { width: 24px; height: 24px; flex: none; filter: grayscale(.35); opacity: .85; }
+    .store-soon .lbl { line-height: 1.2; font-size: .9rem; }
+    .store-soon .lbl b { color: var(--navy); font-weight: 600; }
+    .store-soon .lbl small { display: block; font-size: .74rem; color: var(--slate-light); }
+    .soon-pill { font-size: .66rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #92400e; background: #fef3c7; border-radius: 999px; padding: 3px 8px; margin-left: 4px; white-space: nowrap; }
+
     /* ============================================================
        Strengths
        ============================================================ */
@@ -530,7 +560,8 @@
       .nav-links .nav-cta { margin: 8px 0 0; text-align: center; }
 
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
-      .wide-inner { grid-template-columns: 1fr; gap: 28px; }
+      .wide-inner, .wide-inner.rev { grid-template-columns: 1fr; gap: 28px; }
+      .wide-inner.rev .shots { order: -1; }
       .card-app { grid-column: span 12; }
       .footer-top { grid-template-columns: 1fr 1fr; }
       .footer-top > div:first-child { grid-column: span 2; }
@@ -616,7 +647,7 @@
           </div>
 
           <div class="hero-stats">
-            <div><strong>4</strong><span>Released apps</span></div>
+            <div><strong>5</strong><span>Released apps</span></div>
             <div><strong>AI&nbsp;+&nbsp;ML</strong><span>At the core</span></div>
             <div><strong>Privacy-first</strong><span>Local by design</span></div>
           </div>
@@ -787,6 +818,52 @@
                 Browse projects on GitHub
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
               </a>
+            </div>
+          </article>
+
+          <!-- Ferna PDF Reader -->
+          <article class="card card-wide reveal">
+            <div class="wide-inner rev">
+              <div class="shots">
+                <a class="shot" href="https://tgi25.github.io/ferna-software/ferna-pdf-reader/" target="_blank" rel="noopener" aria-label="Ferna PDF Reader product page">
+                <img src="ferna-pdf-reader/assets/screenshot-1-reader.jpg" width="1280" height="800" loading="lazy"
+                     alt="Ferna PDF Reader showing a research paper fitted to the window width, with the outline panel open" />
+              </a>
+                <div class="shot-row">
+                  <a class="shot" href="https://tgi25.github.io/ferna-software/ferna-pdf-reader/" target="_blank" rel="noopener" aria-label="Sinhala support in Ferna PDF Reader"><img src="ferna-pdf-reader/assets/screenshot-3-sinhala.jpg" width="1280" height="800" loading="lazy" alt="Sinhala text selected and copied correctly in Ferna PDF Reader" /></a>
+                  <a class="shot" href="https://tgi25.github.io/ferna-software/ferna-pdf-reader/" target="_blank" rel="noopener" aria-label="On-device AI assistant in Ferna PDF Reader"><img src="ferna-pdf-reader/assets/screenshot-4-ai.jpg" width="1280" height="800" loading="lazy" alt="The on-device AI assistant summarising a PDF" /></a>
+                </div>
+              </div>
+              <div>
+                <div class="card-top">
+                  <img class="card-icon-img" src="ferna-pdf-reader/assets/app-icon.png" width="52" height="52" alt="" />
+                  <span class="tag tag-new">New in 1.4</span>
+                </div>
+                <h3>Ferna PDF Reader</h3>
+                <p>
+                  A free PDF reader and annotator that runs inside your browser. Read, annotate and understand your
+                  PDFs, with full Sinhala support and an AI assistant that stays on your own computer.
+                  No account, no ads, no tracking.
+                </p>
+                <div class="browsers"><span>Chrome</span><span>Edge</span><span>Brave</span><span>Firefox</span></div>
+                <ul class="feature-list">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Every page fitted to the window width; zoom, rotate, outline and thumbnails</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Smooth word-snapping text selection, even in two-column papers</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Sinhala text repaired so it can be selected, copied and searched</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Private on-device AI: summaries, document Q&amp;A and study quizzes</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Xodo-style stylus, area highlight and standard PDF annotations</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Ctrl+S saves straight over the file; add or remove PDF passwords</li>
+                </ul>
+                <div class="card-actions">
+                  <a class="btn btn-primary btn-dl" href="https://tgi25.github.io/ferna-software/ferna-pdf-reader/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>Visit product page</a>
+                  <a class="btn btn-video btn-dl" href="https://www.youtube.com/watch?v=d7Hch9cQkqM" target="_blank" rel="noopener" data-video="d7Hch9cQkqM" data-title="Ferna PDF Reader 1.4"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8z" fill="#ef4444"/><path d="M9.75 15.3 15.5 12 9.75 8.7z" fill="#fff"/></svg>Watch demo</a>
+                  <a class="btn btn-tiktok btn-dl" href="https://www.tiktok.com/@tgifernando5/video/7696498129100606740" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a7.9 7.9 0 0 0 4.4 1.4V6.7A4.6 4.6 0 0 1 16.6 2z"/></svg>Watch on TikTok</a>
+                </div>
+                <div class="store-soon" role="note">
+                  <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#fff"/><path d="M24 24 6.9 14.1A20 20 0 0 1 44 14H24z" fill="#ea4335"/><path d="M24 24 14.2 41A20 20 0 0 1 6.9 14.1z" fill="#34a853"/><path d="M24 24h20a20 20 0 0 1-29.8 17z" fill="#fbbc05"/><circle cx="24" cy="24" r="8.5" fill="#fff"/><circle cx="24" cy="24" r="6.5" fill="#4285f4"/></svg>
+                  <span class="lbl"><b>Chrome Web Store</b> <span class="soon-pill">Coming soon</span><small>The extension link will be added here shortly.</small></span>
+                </div>
+              </div>
             </div>
           </article>
 
