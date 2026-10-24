@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Install Ferna TTS on Windows — Installation Guide</title>
+<meta name="description" content="Step-by-step guide to download and install Ferna TTS, the offline English and Sinhala text-to-speech app for Windows 10 and 11." />
+<meta name="theme-color" content="#0f172a" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Cdefs%3E%3ClinearGradient id="lg" x1="0" y1="0" x2="1" y2="1"%3E%3Cstop offset="0" stop-color="%233b82f6"/%3E%3Cstop offset="1" stop-color="%231d4ed8"/%3E%3C/linearGradient%3E%3C/defs%3E %3Crect width="64" height="64" rx="15" fill="url(%23lg)"/%3E %3Cellipse cx="32" cy="57.5" rx="23" ry="2.2" fill="%230f172a" opacity=".25"/%3E %3Cg transform="translate(21.5 57)"%3E%3Cpath d="M7 -4C16 -4 17.5 -14 12.5 -19" fill="none" stroke="%23d9893b" stroke-width="3.2" stroke-linecap="round" transform="scale(-1,1)"/%3E %3Cellipse cx="0" cy="-10" rx="8.5" ry="10.5" fill="%23d9893b"/%3E %3Cpath d="M-7.2 -26.5L-6.6 -37.5L-1.2 -31.5Z M7.2 -26.5L6.6 -37.5L1.2 -31.5Z" fill="%23d9893b" stroke="%23d9893b" stroke-width="1" stroke-linejoin="round"/%3E %3Ccircle cx="0" cy="-26" r="7.6" fill="%23d9893b"/%3E%3Cellipse cx="0" cy="-11" rx="4.2" ry="6.5" fill="%23f6d3a6"/%3E %3Cpath d="M0 -33.4v3.2M-2.8 -32.8l.9 2.7M2.8 -32.8l-.9 2.7M-8.3 -13h3.6M-8.4 -8h3.6M8.3 -13h-3.6M8.4 -8h-3.6M-6.9 -24.5h-2.4M6.9 -24.5h2.4" stroke="%238a4b16" stroke-width="1.5" stroke-linecap="round"/%3E%3Cellipse cx="-2.9" cy="-26.6" rx="1.35" ry="1.8" fill="%231f2937"/%3E%3Cellipse cx="2.9" cy="-26.6" rx="1.35" ry="1.8" fill="%231f2937"/%3E %3Cpath d="M-1.1 -23.6H1.1L0 -22.3Z" fill="%23f9a8b8"/%3E%3C/g%3E %3Cg transform="translate(42.5 57)"%3E%3Cpath d="M7 -4C16 -4 17.5 -14 12.5 -19" fill="none" stroke="%23111827" stroke-width="3.2" stroke-linecap="round" transform=""/%3E %3Cellipse cx="0" cy="-10" rx="8.5" ry="10.5" fill="%23111827"/%3E %3Cpath d="M-7.2 -26.5L-6.6 -37.5L-1.2 -31.5Z M7.2 -26.5L6.6 -37.5L1.2 -31.5Z" fill="%23111827" stroke="%23111827" stroke-width="1" stroke-linejoin="round"/%3E %3Ccircle cx="0" cy="-26" r="7.6" fill="%23111827"/%3E%3Cpath d="M-6.5 -36L-5.2 -31.2" stroke="%234b5563" stroke-width="1.1" stroke-linecap="round"/%3E%3Cpath d="M6.5 -36L5.2 -31.2" stroke="%234b5563" stroke-width="1.1" stroke-linecap="round"/%3E%3Cellipse cx="-2.9" cy="-26.6" rx="1.35" ry="1.8" fill="%23facc15"/%3E%3Cellipse cx="2.9" cy="-26.6" rx="1.35" ry="1.8" fill="%23facc15"/%3E %3Cpath d="M-1.1 -23.6H1.1L0 -22.3Z" fill="%23f9a8b8"/%3E%3C/g%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Sinhala:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="ferna-logo" viewBox="0 0 64 64"><defs><linearGradient id="lg-sym" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs>
+<rect width="64" height="64" rx="15" fill="url(#lg-sym)"/>
+<ellipse cx="32" cy="57.5" rx="23" ry="2.2" fill="#0f172a" opacity=".25"/>
+<g transform="translate(21.5 57)"><path d="M7 -4C16 -4 17.5 -14 12.5 -19" fill="none" stroke="#d9893b" stroke-width="3.2" stroke-linecap="round" transform="scale(-1,1)"/>
+<ellipse cx="0" cy="-10" rx="8.5" ry="10.5" fill="#d9893b"/>
+<path d="M-7.2 -26.5L-6.6 -37.5L-1.2 -31.5Z M7.2 -26.5L6.6 -37.5L1.2 -31.5Z" fill="#d9893b" stroke="#d9893b" stroke-width="1" stroke-linejoin="round"/>
+<circle cx="0" cy="-26" r="7.6" fill="#d9893b"/><ellipse cx="0" cy="-11" rx="4.2" ry="6.5" fill="#f6d3a6"/>
+<path d="M0 -33.4v3.2M-2.8 -32.8l.9 2.7M2.8 -32.8l-.9 2.7M-8.3 -13h3.6M-8.4 -8h3.6M8.3 -13h-3.6M8.4 -8h-3.6M-6.9 -24.5h-2.4M6.9 -24.5h2.4" stroke="#8a4b16" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="-2.9" cy="-26.6" rx="1.35" ry="1.8" fill="#1f2937"/><ellipse cx="2.9" cy="-26.6" rx="1.35" ry="1.8" fill="#1f2937"/>
+<path d="M-1.1 -23.6H1.1L0 -22.3Z" fill="#f9a8b8"/></g>
+<g transform="translate(42.5 57)"><path d="M7 -4C16 -4 17.5 -14 12.5 -19" fill="none" stroke="#111827" stroke-width="3.2" stroke-linecap="round" transform=""/>
+<ellipse cx="0" cy="-10" rx="8.5" ry="10.5" fill="#111827"/>
+<path d="M-7.2 -26.5L-6.6 -37.5L-1.2 -31.5Z M7.2 -26.5L6.6 -37.5L1.2 -31.5Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+<circle cx="0" cy="-26" r="7.6" fill="#111827"/><path d="M-6.5 -36L-5.2 -31.2" stroke="#4b5563" stroke-width="1.1" stroke-linecap="round"/><path d="M6.5 -36L5.2 -31.2" stroke="#4b5563" stroke-width="1.1" stroke-linecap="round"/><ellipse cx="-2.9" cy="-26.6" rx="1.35" ry="1.8" fill="#facc15"/><ellipse cx="2.9" cy="-26.6" rx="1.35" ry="1.8" fill="#facc15"/>
+<path d="M-1.1 -23.6H1.1L0 -22.3Z" fill="#f9a8b8"/></g></symbol></svg>
+<div class="topbar"><div class="in">
+  <a class="brand" href="../" aria-label="Ferna Software Solutions home"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#ferna-logo"/></svg><span>Ferna TTS<small>Ferna Software Solutions</small></span></a>
+  <nav class="topnav" aria-label="Ferna TTS"><a href="install.html" aria-current="page">Install</a><a href="manual.html">User Manual</a><a href="../#products">All products</a></nav>
+</div></div>
+
+<header class="hero">
+  <div class="in">
+    <p class="crumb"><a href="../">Ferna Software Solutions</a> / <a href="../#products">Products</a> / Ferna TTS</p>
+    <h1>Installing Ferna TTS on Windows</h1>
+    <p class="lead">Everything you need to download Ferna TTS, get past the Windows security prompts, and hear your first sentence read aloud. It takes about five minutes.</p>
+    <div class="meta-row"><span class="pill">Version 1.1.1</span><span class="pill">Windows 10 / 11 · 64-bit</span><span class="pill">Free</span><span class="pill">Works offline</span></div>
+    <div class="actions no-print" style="margin-top:22px">
+      <a class="btn btn-primary" href="https://github.com/tgi25/ferna-software/releases/download/ferna-tts-v1.1.1/FernaTTS-Setup-1.1.1.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download installer (.exe)</a>
+      <a class="btn btn-ghost" href="manual.html">Read the User Manual</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="toc" aria-label="On this page">
+    <h2>On this page</h2>
+    <ol>
+      <li><a href="#requirements">Before you start</a></li>
+      <li><a href="#download">Download</a></li>
+      <li><a href="#smartscreen">Windows security prompts</a></li>
+      <li><a href="#setup">Run the installer</a></li>
+      <li><a href="#first-run">First run</a></li>
+      <li><a href="#sinhala">Sinhala voices</a></li>
+      <li><a href="#update">Update or uninstall</a></li>
+      <li><a href="#troubleshooting">Troubleshooting</a></li>
+    </ol>
+    <button class="btn btn-light print" type="button" onclick="window.print()">Print / save as PDF</button>
+  </nav>
+
+  <main class="doc">
+    <section id="requirements">
+      <h2><span class="n">1</span>Before you start</h2>
+      <ul>
+        <li><b>Windows 10 or Windows 11</b>, 64-bit.</li>
+        <li><b>Speakers or headphones.</b> Wired, USB and Bluetooth devices all work.</li>
+        <li><b>At least one Windows voice.</b> Windows already includes English voices such as Microsoft David, Zira or Mark, so most people don't need to add anything.</li>
+        <li>No administrator password and no internet connection are needed once Ferna TTS is installed. Everything is read on your own computer.</li>
+      </ul>
+      <div class="tip"><b>Check your voices:</b> open <b>Settings → Time &amp; language → Speech</b>. Under <i>Manage voices</i> you can add more voices or languages. Ferna TTS can use any voice listed there.</div>
+    </section>
+
+    <section id="download">
+      <h2><span class="n">2</span>Download the installer</h2>
+      <ol class="steps">
+        <li>Click <b>Download installer (.exe)</b> at the top of this page, or on the Ferna TTS card on the <a href="../#products">Ferna Software Solutions</a> website. The file is <code>FernaTTS-Setup-1.1.1.exe</code>.</li>
+        <li>Your browser saves it to your <b>Downloads</b> folder.</li>
+      </ol>
+      <h3>If your browser warns you about the download</h3>
+      <p>New apps that haven't been downloaded by many people yet often trigger a browser warning. This is normal for a small independent developer.</p>
+      <ul>
+        <li><b>Microsoft Edge</b> may say <i>"isn't commonly downloaded"</i>. Hover over the download, click <b>⋯</b> (More actions) → <b>Keep</b>. If asked again, choose <b>Show more → Keep anyway</b>.</li>
+        <li><b>Google Chrome</b> may show <i>"Suspicious download blocked"</i>. Open the downloads list (<kbd>Ctrl</kbd> + <kbd>J</kbd>) and choose <b>Download suspicious file</b> or <b>Keep</b>.</li>
+        <li><b>Firefox</b> may ask you to confirm; choose <b>Allow download</b>.</li>
+      </ul>
+    </section>
+
+    <section id="smartscreen">
+      <h2><span class="n">3</span>Get past the Windows security prompts</h2>
+      <p>Ferna TTS isn't yet signed with a paid code-signing certificate, so Windows doesn't recognise the publisher. Depending on your security settings you'll see one of two messages.</p>
+
+      <h3>"Windows protected your PC" (Microsoft Defender SmartScreen)</h3>
+      <p>This is the most common message. You can safely continue:</p>
+      <div class="win-dialog" aria-hidden="true">
+        <div class="bar">Windows protected your PC</div>
+        <div class="body"><b>Windows protected your PC</b>Microsoft Defender SmartScreen prevented an unrecognised app from starting.<br><u>More info</u></div>
+        <div class="foot"><span class="hl">Run anyway</span><span>Don't run</span></div>
+      </div>
+      <ol class="steps">
+        <li>Click <b>More info</b>.</li>
+        <li>Check that the app name shows <code>FernaTTS-Setup-1.1.1.exe</code>.</li>
+        <li>Click <b>Run anyway</b>. Windows remembers your choice, so you won't see this again for this file.</li>
+      </ol>
+
+      <h3>"Smart App Control blocked an app that may be unsafe"</h3>
+      <p>Some Windows 11 PCs have <b>Smart App Control</b> switched on. It blocks every unsigned app and has no <i>Run anyway</i> button.</p>
+      <div class="warn">
+        <b>Think before switching Smart App Control off.</b> The only way past this block is to turn the feature off in
+        <b>Windows Security → App &amp; browser control → Smart App Control settings → Off</b>. On some versions of Windows it can't be
+        turned back on without resetting Windows. If you're not sure, leave it on and use Ferna TTS on another PC for now.
+        A Microsoft-signed version is planned so this step won't be needed in future.
+      </div>
+    </section>
+
+    <section id="setup">
+      <h2><span class="n">4</span>Run the installer</h2>
+      <ol class="steps">
+        <li>Double-click <code>FernaTTS-Setup-1.1.1.exe</code> in your Downloads folder (or click it in the browser's download list).</li>
+        <li>If Windows asks <i>"Do you want to allow this app to make changes to your device?"</i>, click <b>Yes</b>.</li>
+        <li>Follow the setup wizard. Keep the suggested install folder unless you have a reason to change it, and tick <b>Create a desktop shortcut</b> if you'd like one.</li>
+        <li>Click <b>Install</b>, then <b>Finish</b>. Leave <b>Launch Ferna TTS</b> ticked to start it straight away.</li>
+      </ol>
+      <div class="note">Ferna TTS is added to the <b>Start menu</b>. To open it later, press the <kbd>Windows</kbd> key, type <b>Ferna TTS</b> and press <kbd>Enter</kbd>.</div>
+    </section>
+
+    <section id="first-run">
+      <h2><span class="n">5</span>First run: hear your first sentence</h2>
+      <p>Ferna TTS runs quietly in the <b>system tray</b>, the row of small icons beside the clock. It doesn't open a big window.</p>
+      <ol class="steps">
+        <li>Find the Ferna TTS icon in the tray. If you can't see it, click the small <b>^</b> arrow to show hidden icons. You can drag the icon onto the taskbar to keep it visible.</li>
+        <li>Open any document, web page or email and <b>select a sentence</b> with your mouse.</li>
+        <li>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>, or click the small <b>speak bubble</b> that appears beside your mouse pointer.</li>
+        <li>Ferna TTS starts reading, and a small <b>control bar</b> appears so you can pause, skip or stop.</li>
+      </ol>
+      <div class="tip"><b>Next:</b> see the <a href="manual.html">User Manual</a> for the control bar, the keyboard shortcuts, choosing a voice and speed, Sinhala reading and pronunciation rules.</div>
+    </section>
+
+    <section id="sinhala">
+      <h2><span class="n">6</span>Sinhala voices <span class="si" lang="si" style="font-weight:600;color:var(--accent)">සිංහල</span></h2>
+      <p>Ferna TTS reads Sinhala and mixed Sinhala–English text in two ways, which you choose in the Control Panel:</p>
+      <ul>
+        <li><b>Singlish transliteration</b> turns Sinhala script into Latin letters and reads it with your normal Windows voice. Nothing extra is needed.</li>
+        <li><b>eSpeak NG Sinhala voice</b> uses a native Sinhala voice. If Ferna TTS reports that eSpeak NG can't be found, install the free <b>eSpeak NG</b> for Windows (the <code>.msi</code> file from the official eSpeak NG releases page on GitHub), then restart Ferna TTS.</li>
+      </ul>
+    </section>
+
+    <section id="update">
+      <h2><span class="n">7</span>Update or uninstall</h2>
+      <h3>Updating to a new version</h3>
+      <ol class="steps">
+        <li>Right-click the tray icon and choose <b>Exit</b> to close Ferna TTS.</li>
+        <li>Download the new installer from the website and run it, as in steps 2–4. It installs over the old version.</li>
+        <li>Your settings and pronunciation rules are kept.</li>
+      </ol>
+      <h3>Uninstalling</h3>
+      <ol class="steps">
+        <li>Exit Ferna TTS from the tray icon.</li>
+        <li>Open <b>Settings → Apps → Installed apps</b> (Windows 10: <b>Settings → Apps → Apps &amp; features</b>).</li>
+        <li>Find <b>Ferna TTS</b>, click <b>⋯</b> → <b>Uninstall</b>, and confirm.</li>
+      </ol>
+      <p>Your personal settings stay in <code>%APPDATA%\FernaTTS</code> in case you reinstall. To remove them too, paste that address into File Explorer's address bar and delete the folder.</p>
+    </section>
+
+    <section id="troubleshooting">
+      <h2><span class="n">8</span>Troubleshooting</h2>
+      <div class="tbl"><table>
+        <thead><tr><th>Problem</th><th>What to do</th></tr></thead>
+        <tbody>
+          <tr><td>Nothing happens when I press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd></td><td>Check that Ferna TTS is running (tray icon). Make sure text is actually selected. Another app may use the same shortcut: change it on the <b>Hotkeys</b> tab of the Control Panel.</td></tr>
+          <tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd> also opens "Save As" in my app</td><td>On the <b>Hotkeys</b> tab, tick <b>Block hotkeys from reaching the active app</b>.</td></tr>
+          <tr><td>No sound</td><td>On the <b>Audio</b> tab, choose the correct output device. Check the Windows volume mixer and that the device isn't muted.</td></tr>
+          <tr><td>The first word is cut off (Bluetooth headphones)</td><td>Bluetooth devices take a moment to wake. On the <b>Audio</b> tab, increase the <b>lead-in</b> (default 400 ms) or the time the device is kept awake between readings (default 30 s).</td></tr>
+          <tr><td>A word or abbreviation is read wrongly</td><td>Add a rule on the <b>Pronunciation</b> tab. See the <a href="manual.html#pronunciation">User Manual</a>.</td></tr>
+          <tr><td>Windows blocks the installer</td><td>See <a href="#smartscreen">step 3</a>.</td></tr>
+        </tbody>
+      </table></div>
+      <p>Still stuck? Email <a href="mailto:tgi.fernando@gmail.com?subject=Ferna%20TTS%20help">tgi.fernando@gmail.com</a> with your Windows version and a short description, or a screenshot.</p>
+    </section>
+  </main>
+</div>
+
+<footer class="footer"><div class="in">
+  <span>&copy; 2026 Ferna Software Solutions. All rights reserved.</span>
+  <span class="links"><a href="../">Home</a> &nbsp;·&nbsp; <a href="install.html">Install</a> &nbsp;·&nbsp; <a href="manual.html">User Manual</a> &nbsp;·&nbsp; <a href="https://buymeacoffee.com/fernasolutions" target="_blank" rel="noopener">Buy me a coffee</a></span>
+</div></footer>
+</body>
+</html>

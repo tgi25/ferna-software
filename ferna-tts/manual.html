@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ferna TTS — User Manual</title>
+<meta name="description" content="How to use Ferna TTS: read selected text aloud in any Windows app, in English and Sinhala, with the control bar, keyboard shortcuts and pronunciation rules." />
+<meta name="theme-color" content="#0f172a" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Cdefs%3E%3ClinearGradient id="lg" x1="0" y1="0" x2="1" y2="1"%3E%3Cstop offset="0" stop-color="%233b82f6"/%3E%3Cstop offset="1" stop-color="%231d4ed8"/%3E%3C/linearGradient%3E%3C/defs%3E %3Crect width="64" height="64" rx="15" fill="url(%23lg)"/%3E %3Cellipse cx="32" cy="57.5" rx="23" ry="2.2" fill="%230f172a" opacity=".25"/%3E %3Cg transform="translate(21.5 57)"%3E%3Cpath d="M7 -4C16 -4 17.5 -14 12.5 -19" fill="none" stroke="%23d9893b" stroke-width="3.2" stroke-linecap="round" transform="scale(-1,1)"/%3E %3Cellipse cx="0" cy="-10" rx="8.5" ry="10.5" fill="%23d9893b"/%3E %3Cpath d="M-7.2 -26.5L-6.6 -37.5L-1.2 -31.5Z M7.2 -26.5L6.6 -37.5L1.2 -31.5Z" fill="%23d9893b" stroke="%23d9893b" stroke-width="1" stroke-linejoin="round"/%3E %3Ccircle cx="0" cy="-26" r="7.6" fill="%23d9893b"/%3E%3Cellipse cx="0" cy="-11" rx="4.2" ry="6.5" fill="%23f6d3a6"/%3E %3Cpath d="M0 -33.4v3.2M-2.8 -32.8l.9 2.7M2.8 -32.8l-.9 2.7M-8.3 -13h3.6M-8.4 -8h3.6M8.3 -13h-3.6M8.4 -8h-3.6M-6.9 -24.5h-2.4M6.9 -24.5h2.4" stroke="%238a4b16" stroke-width="1.5" stroke-linecap="round"/%3E%3Cellipse cx="-2.9" cy="-26.6" rx="1.35" ry="1.8" fill="%231f2937"/%3E%3Cellipse cx="2.9" cy="-26.6" rx="1.35" ry="1.8" fill="%231f2937"/%3E %3Cpath d="M-1.1 -23.6H1.1L0 -22.3Z" fill="%23f9a8b8"/%3E%3C/g%3E %3Cg transform="translate(42.5 57)"%3E%3Cpath d="M7 -4C16 -4 17.5 -14 12.5 -19" fill="none" stroke="%23111827" stroke-width="3.2" stroke-linecap="round" transform=""/%3E %3Cellipse cx="0" cy="-10" rx="8.5" ry="10.5" fill="%23111827"/%3E %3Cpath d="M-7.2 -26.5L-6.6 -37.5L-1.2 -31.5Z M7.2 -26.5L6.6 -37.5L1.2 -31.5Z" fill="%23111827" stroke="%23111827" stroke-width="1" stroke-linejoin="round"/%3E %3Ccircle cx="0" cy="-26" r="7.6" fill="%23111827"/%3E%3Cpath d="M-6.5 -36L-5.2 -31.2" stroke="%234b5563" stroke-width="1.1" stroke-linecap="round"/%3E%3Cpath d="M6.5 -36L5.2 -31.2" stroke="%234b5563" stroke-width="1.1" stroke-linecap="round"/%3E%3Cellipse cx="-2.9" cy="-26.6" rx="1.35" ry="1.8" fill="%23facc15"/%3E%3Cellipse cx="2.9" cy="-26.6" rx="1.35" ry="1.8" fill="%23facc15"/%3E %3Cpath d="M-1.1 -23.6H1.1L0 -22.3Z" fill="%23f9a8b8"/%3E%3C/g%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Sinhala:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="ferna-logo" viewBox="0 0 64 64"><defs><linearGradient id="lg-sym" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs>
+<rect width="64" height="64" rx="15" fill="url(#lg-sym)"/>
+<ellipse cx="32" cy="57.5" rx="23" ry="2.2" fill="#0f172a" opacity=".25"/>
+<g transform="translate(21.5 57)"><path d="M7 -4C16 -4 17.5 -14 12.5 -19" fill="none" stroke="#d9893b" stroke-width="3.2" stroke-linecap="round" transform="scale(-1,1)"/>
+<ellipse cx="0" cy="-10" rx="8.5" ry="10.5" fill="#d9893b"/>
+<path d="M-7.2 -26.5L-6.6 -37.5L-1.2 -31.5Z M7.2 -26.5L6.6 -37.5L1.2 -31.5Z" fill="#d9893b" stroke="#d9893b" stroke-width="1" stroke-linejoin="round"/>
+<circle cx="0" cy="-26" r="7.6" fill="#d9893b"/><ellipse cx="0" cy="-11" rx="4.2" ry="6.5" fill="#f6d3a6"/>
+<path d="M0 -33.4v3.2M-2.8 -32.8l.9 2.7M2.8 -32.8l-.9 2.7M-8.3 -13h3.6M-8.4 -8h3.6M8.3 -13h-3.6M8.4 -8h-3.6M-6.9 -24.5h-2.4M6.9 -24.5h2.4" stroke="#8a4b16" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="-2.9" cy="-26.6" rx="1.35" ry="1.8" fill="#1f2937"/><ellipse cx="2.9" cy="-26.6" rx="1.35" ry="1.8" fill="#1f2937"/>
+<path d="M-1.1 -23.6H1.1L0 -22.3Z" fill="#f9a8b8"/></g>
+<g transform="translate(42.5 57)"><path d="M7 -4C16 -4 17.5 -14 12.5 -19" fill="none" stroke="#111827" stroke-width="3.2" stroke-linecap="round" transform=""/>
+<ellipse cx="0" cy="-10" rx="8.5" ry="10.5" fill="#111827"/>
+<path d="M-7.2 -26.5L-6.6 -37.5L-1.2 -31.5Z M7.2 -26.5L6.6 -37.5L1.2 -31.5Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+<circle cx="0" cy="-26" r="7.6" fill="#111827"/><path d="M-6.5 -36L-5.2 -31.2" stroke="#4b5563" stroke-width="1.1" stroke-linecap="round"/><path d="M6.5 -36L5.2 -31.2" stroke="#4b5563" stroke-width="1.1" stroke-linecap="round"/><ellipse cx="-2.9" cy="-26.6" rx="1.35" ry="1.8" fill="#facc15"/><ellipse cx="2.9" cy="-26.6" rx="1.35" ry="1.8" fill="#facc15"/>
+<path d="M-1.1 -23.6H1.1L0 -22.3Z" fill="#f9a8b8"/></g></symbol></svg>
+<div class="topbar"><div class="in">
+  <a class="brand" href="../" aria-label="Ferna Software Solutions home"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#ferna-logo"/></svg><span>Ferna TTS<small>Ferna Software Solutions</small></span></a>
+  <nav class="topnav" aria-label="Ferna TTS"><a href="install.html">Install</a><a href="manual.html" aria-current="page">User Manual</a><a href="../#products">All products</a></nav>
+</div></div>
+
+<header class="hero">
+  <div class="in">
+    <p class="crumb"><a href="../">Ferna Software Solutions</a> / <a href="../#products">Products</a> / Ferna TTS</p>
+    <h1>Ferna TTS User Manual</h1>
+    <p class="lead">Select text in any app and Ferna TTS reads it aloud, in English, Sinhala or a mix of both. It works offline, and nothing you read leaves your computer.</p>
+    <div class="meta-row"><span class="pill">Version 1.1.1</span><span class="pill">Windows 10 / 11</span><span class="pill">English · <span lang="si">සිංහල</span></span></div>
+    <div class="actions no-print" style="margin-top:22px">
+      <a class="btn btn-primary" href="https://github.com/tgi25/ferna-software/releases/download/ferna-tts-v1.1.1/FernaTTS-Setup-1.1.1.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download installer (.exe)</a>
+      <a class="btn btn-ghost" href="install.html">Installation Guide</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="toc" aria-label="On this page">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#quick-start">Quick start</a></li>
+      <li><a href="#bubble">The speak bubble</a></li>
+      <li><a href="#control-bar">The control bar</a></li>
+      <li><a href="#shortcuts">Keyboard shortcuts</a></li>
+      <li><a href="#queue">Long text and the queue</a></li>
+      <li><a href="#voices">Voices, speed and sound</a></li>
+      <li><a href="#sinhala">Sinhala and mixed text</a></li>
+      <li><a href="#pronunciation">Pronunciation rules</a></li>
+      <li><a href="#wav">Saving speech as audio</a></li>
+      <li><a href="#settings">Control Panel reference</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+      <li><a href="#faq">Questions and answers</a></li>
+    </ol>
+    <button class="btn btn-light print" type="button" onclick="window.print()">Print / save as PDF</button>
+  </nav>
+
+  <main class="doc">
+    <section id="quick-start">
+      <h2><span class="n">1</span>Quick start</h2>
+      <p>Ferna TTS lives in the <b>system tray</b>, beside the Windows clock. While it's running, it can read text from any app: Word, PDFs, web pages, email or chat.</p>
+      <ol class="steps">
+        <li><b>Select</b> some text with the mouse, from a single word up to a whole document.</li>
+        <li>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>, or click the <b>speak bubble</b> next to your pointer.</li>
+        <li>Listen. Use the <b>control bar</b> or the one-key shortcuts to pause, go back or skip.</li>
+      </ol>
+      <p>Ferna TTS reads the whole selection from top to bottom, one sentence after another, without stopping between sentences.</p>
+      <div class="note">To open the <b>Control Panel</b> (all settings), right-click the Ferna TTS tray icon. The same menu has <b>Exit</b> to close the app.</div>
+    </section>
+
+    <section id="bubble">
+      <h2><span class="n">2</span>The speak bubble</h2>
+      <p>After you select text, a small speak bubble appears <b>at your mouse pointer</b>. Click it without moving the mouse and Ferna TTS starts reading. You don't need the keyboard at all.</p>
+      <ul>
+        <li>The bubble ignores quick double- and triple-clicks, so selecting a word or paragraph by clicking won't start reading by mistake.</li>
+        <li>If you'd rather it appeared <b>below the selection</b> instead of at the pointer, change it on the <b>General</b> tab.</li>
+        <li>Just carry on working if you don't need it. The bubble disappears by itself.</li>
+      </ul>
+    </section>
+
+    <section id="control-bar">
+      <h2><span class="n">3</span>The control bar</h2>
+      <p>While Ferna TTS is reading, a small control bar floats on screen:</p>
+      <div class="ctrlbar" aria-hidden="true"><span class="grip">⋮⋮</span><span title="Previous">⏮</span><span class="on" title="Play/Pause">⏯</span><span title="Next">⏭</span><span title="Restart">↺</span><span title="Speed">1.0×</span><span title="Stop">⏹</span><span title="Close">✕</span></div>
+      <div class="tbl"><table>
+        <thead><tr><th>Button</th><th>What it does</th></tr></thead>
+        <tbody>
+          <tr><td>⏮ Previous</td><td>Goes back one sentence.</td></tr>
+          <tr><td>⏯ Play / Pause</td><td>Pauses or resumes. By default it pauses at the end of the current sentence, and resuming carries on with the next one.</td></tr>
+          <tr><td>⏭ Next</td><td>Skips to the next sentence.</td></tr>
+          <tr><td>↺ Restart</td><td>Starts the reading again from the beginning.</td></tr>
+          <tr><td>Speed</td><td>Changes the reading speed.</td></tr>
+          <tr><td>⏹ Stop</td><td>Stops reading.</td></tr>
+          <tr><td>✕ Close</td><td>Hides the bar.</td></tr>
+        </tbody>
+      </table></div>
+      <p>Drag the bar by its handle (⋮⋮) to put it wherever you like. On the <b>Appearance</b> tab you can choose from five high-contrast colour themes.</p>
+    </section>
+
+    <section id="shortcuts">
+      <h2><span class="n">4</span>Keyboard shortcuts</h2>
+      <h3>Start reading</h3>
+      <p><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> reads the selected text. You can change this on the <b>Hotkeys</b> tab.</p>
+      <h3>One-key shortcuts while reading</h3>
+      <p>While a reading is in progress and the control bar is visible, single keys control playback:</p>
+      <div class="tbl"><table>
+        <thead><tr><th>Key</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>P</kbd></td><td>Play / pause</td></tr>
+          <tr><td><kbd>[</kbd> or <kbd>B</kbd></td><td>Previous sentence</td></tr>
+          <tr><td><kbd>]</kbd> or <kbd>N</kbd></td><td>Next sentence</td></tr>
+          <tr><td><kbd>R</kbd></td><td>Restart from the beginning</td></tr>
+          <tr><td><kbd>S</kbd></td><td>Stop</td></tr>
+        </tbody>
+      </table></div>
+      <ul>
+        <li>These keys are captured by Ferna TTS, so they don't also type into, or trigger shortcuts in, the app you're using.</li>
+        <li>Shortcuts with <kbd>Ctrl</kbd>, <kbd>Alt</kbd> or <kbd>Windows</kbd> still pass through to your app as normal.</li>
+        <li>If you start typing somewhere else while Ferna TTS is reading, the one-key shortcuts switch off automatically so your typing isn't interrupted.</li>
+        <li>You can change or turn off these keys on the <b>Hotkeys</b> tab.</li>
+      </ul>
+      <h3>Hotkey options</h3>
+      <ul>
+        <li><b>Block hotkeys from reaching the active app.</b> Tick this if <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd> also opens <i>Save As</i> in programs like Word.</li>
+        <li><b>Capture hotkey adds to the queue when already reading.</b> When ticked, selecting more text and pressing the hotkey adds it to the end of the queue. When it's off, the new text replaces the current reading.</li>
+      </ul>
+    </section>
+
+    <section id="queue">
+      <h2><span class="n">5</span>Long text and the reading queue</h2>
+      <p>You can select pages of text at once. Ferna TTS splits it into sentences and reads them continuously, so you can move back and forward a sentence at a time.</p>
+      <p>To listen to several passages in a row, turn on <b>Capture hotkey adds to the queue</b> (Hotkeys tab). Then select each passage and press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>, and they're read one after another.</p>
+    </section>
+
+    <section id="voices">
+      <h2><span class="n">6</span>Voices, speed and sound</h2>
+      <ul>
+        <li><b>Voice.</b> Ferna TTS uses the voices installed in Windows. To add more, open <b>Settings → Time &amp; language → Speech → Manage voices</b>, then choose the new voice in Ferna TTS.</li>
+        <li><b>Speed.</b> Change it from the control bar or in the Control Panel; quick presets make it easy to switch.</li>
+        <li><b>Output device</b> (Audio tab). Pick which speakers or headphones to use, independently of the Windows default.</li>
+        <li><b>Pause at end of sentence</b> (Audio tab, on by default). Pausing waits until the current sentence finishes. Turn it off for an instant pause.</li>
+        <li><b>Bluetooth headphones.</b> Some devices miss the first word while they wake up. Ferna TTS adds a short silent <b>lead-in</b> (default 400 ms) and keeps the device awake for a while between readings (default 30 s). Increase these on the Audio tab if the first word is still cut off.</li>
+      </ul>
+    </section>
+
+    <section id="sinhala">
+      <h2><span class="n">7</span>Sinhala and mixed text <span lang="si" style="font-weight:600;color:var(--accent)">සිංහල</span></h2>
+      <p>Ferna TTS understands Sinhala script, and text that mixes Sinhala and English. Choose how Sinhala is spoken in the Control Panel:</p>
+      <ul>
+        <li><b>Singlish transliteration.</b> Sinhala words are converted to their Latin-letter sounds and read by your Windows voice. It works with no extra software.</li>
+        <li><b>eSpeak NG Sinhala voice.</b> A native Sinhala voice. If it isn't available, see <a href="install.html#sinhala">Sinhala voices</a> in the Installation Guide.</li>
+      </ul>
+      <p>English words inside Sinhala text are read in English.</p>
+    </section>
+
+    <section id="pronunciation">
+      <h2><span class="n">8</span>Pronunciation rules</h2>
+      <p>Open the <b>Pronunciation</b> tab to control how particular words, names and abbreviations are said.</p>
+      <h3>Built-in rules</h3>
+      <p>About 130 common English abbreviations are expanded automatically, for example <i>Dr.</i> → "Doctor", <i>e.g.</i> → "for example", <i>etc.</i> → "et cetera". These rules are context-aware: some apply only next to numbers or in the middle of a sentence, so they don't misfire.</p>
+      <h3>Your own rules</h3>
+      <ol class="steps">
+        <li>On the Pronunciation tab, click <b>Add</b>.</li>
+        <li>Type the text as written (for example <code>USJ</code>) and how it should be said (for example <code>University of Sri Jayewardenepura</code>).</li>
+        <li>Save. The rule applies straight away, including to audio you save as a file.</li>
+      </ol>
+      <p>Your rules always take priority over the built-in ones. Advanced users can write <b>regular-expression</b> rules for patterns such as reference numbers.</p>
+      <h3>Import and export</h3>
+      <ul>
+        <li><b>Import</b> rule lists from other apps: Balabolka dictionaries (<code>.bxd</code>, <code>.rex</code>, <code>.dic</code>), W3C pronunciation lexicons (<code>.pls</code>), or plain <code>.txt</code>, <code>.csv</code> and <code>.json</code> files, including a <code>.zip</code> of several.</li>
+        <li><b>Export</b> your rules to <code>.json</code> or <code>.dic</code> to back them up or share them.</li>
+        <li>Your rules are stored in <code>%APPDATA%\FernaTTS\pronunciation.json</code>.</li>
+      </ul>
+    </section>
+
+    <section id="wav">
+      <h2><span class="n">9</span>Saving speech as an audio file</h2>
+      <p>Ferna TTS can save a reading as a <b>WAV</b> file instead of playing it, which is useful for listening later on a phone or adding narration to a presentation. Choose the WAV export option, select where to save the file, and Ferna TTS writes the audio using your current voice, speed and pronunciation rules.</p>
+    </section>
+
+    <section id="settings">
+      <h2><span class="n">10</span>Control Panel reference</h2>
+      <div class="tbl"><table>
+        <thead><tr><th>Tab</th><th>Main settings</th></tr></thead>
+        <tbody>
+          <tr><td><b>General</b></td><td>Speak bubble on/off, and whether it appears at the pointer or below the selection.</td></tr>
+          <tr><td><b>Hotkeys</b></td><td>Capture hotkey; one-key reading shortcuts; block hotkeys from reaching the active app; add captures to the queue.</td></tr>
+          <tr><td><b>Audio</b></td><td>Output device; pause at end of sentence; Bluetooth lead-in and keep-awake time.</td></tr>
+          <tr><td><b>Appearance</b></td><td>Control-bar colour theme (five high-contrast themes).</td></tr>
+          <tr><td><b>Pronunciation</b></td><td>Built-in and personal rules; import and export.</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="privacy">
+      <h2><span class="n">11</span>Privacy</h2>
+      <p>Ferna TTS works <b>entirely offline</b>. The text you select is read by voices on your own computer and is never uploaded, stored online or shared. There are no accounts, ads or tracking.</p>
+    </section>
+
+    <section id="faq">
+      <h2><span class="n">12</span>Questions and answers</h2>
+      <h3>Does it work in PDFs and web pages?</h3>
+      <p>Yes. If you can select the text, Ferna TTS can read it, including in Word, browsers, PDF readers such as <a href="../ferna-pdf-reader/">Ferna PDF Reader</a>, and email.</p>
+      <h3>Pressing P in my app paused the reading instead of typing</h3>
+      <p>One-key shortcuts are active only while a reading is running. Stop the reading (<kbd>S</kbd>) or simply start typing; the typing guard turns the shortcuts off.</p>
+      <h3>How do I make Ferna TTS start with Windows?</h3>
+      <p>Press <kbd>Windows</kbd> + <kbd>R</kbd>, type <code>shell:startup</code> and press <kbd>Enter</kbd>. Copy the Ferna TTS shortcut from your desktop or Start menu into the folder that opens.</p>
+      <h3>Something isn't working</h3>
+      <p>See <a href="install.html#troubleshooting">Troubleshooting</a> in the Installation Guide, or email <a href="mailto:tgi.fernando@gmail.com?subject=Ferna%20TTS%20help">tgi.fernando@gmail.com</a>.</p>
+    </section>
+  </main>
+</div>
+
+<footer class="footer"><div class="in">
+  <span>&copy; 2026 Ferna Software Solutions. All rights reserved.</span>
+  <span class="links"><a href="../">Home</a> &nbsp;·&nbsp; <a href="install.html">Install</a> &nbsp;·&nbsp; <a href="manual.html">User Manual</a> &nbsp;·&nbsp; <a href="https://buymeacoffee.com/fernasolutions" target="_blank" rel="noopener">Buy me a coffee</a></span>
+</div></footer>
+</body>
+</html>
