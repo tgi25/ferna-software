@@ -463,6 +463,34 @@
     .btn-tiktok:hover { background: #000; transform: translateY(-2px); box-shadow: 0 10px 20px -10px rgba(0,0,0,.6); }
     .btn-tiktok svg { width: 17px; height: 17px; }
 
+
+    /* Ferna TTS card mock */
+    .tts-mock {
+      position: relative; border: 1px solid var(--border); border-radius: var(--radius);
+      background: linear-gradient(135deg, #eff6ff, #f8fafc); padding: 22px 22px 110px; overflow: hidden;
+    }
+    .tts-doc { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; font-size: .88rem; line-height: 1.75; color: var(--slate); box-shadow: var(--shadow-sm); }
+    .tts-doc .si { font-family: "Noto Sans Sinhala", "Inter", sans-serif; }
+    .tts-doc mark { background: #bfdbfe; color: var(--navy); border-radius: 3px; padding: 1px 0; }
+    .tts-doc mark.now { background: var(--accent); color: #fff; }
+    .tts-bubble {
+      position: absolute; right: 30px; bottom: 64px; display: inline-flex; align-items: center; gap: 6px;
+      background: var(--navy); color: #fff; font-size: .74rem; font-weight: 600; padding: 6px 10px; border-radius: 999px; box-shadow: var(--shadow-md);
+    }
+    .tts-bubble svg { width: 14px; height: 14px; }
+    .tts-bar {
+      position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%);
+      display: flex; gap: 4px; align-items: center; background: var(--navy); border-radius: 12px; padding: 6px 8px; box-shadow: var(--shadow-md);
+    }
+    .tts-bar span { min-width: 30px; height: 28px; padding: 0 7px; border-radius: 7px; display: grid; place-items: center; color: #fff; font-size: .8rem; background: rgba(255,255,255,.08); }
+    .tts-bar span.on { background: var(--accent); }
+    .tts-bar .wave { display: flex; gap: 2px; align-items: center; background: none; padding: 0 6px; }
+    .tts-bar .wave i { width: 3px; border-radius: 2px; background: #93c5fd; animation: wv 1s ease-in-out infinite; }
+    .tts-bar .wave i:nth-child(1) { height: 8px; } .tts-bar .wave i:nth-child(2) { height: 16px; animation-delay: .15s; }
+    .tts-bar .wave i:nth-child(3) { height: 11px; animation-delay: .3s; } .tts-bar .wave i:nth-child(4) { height: 18px; animation-delay: .45s; }
+    @keyframes wv { 50% { transform: scaleY(.45); } }
+    .btn-doc svg { width: 17px; height: 17px; }
+
     /* ============================================================
        Strengths
        ============================================================ */
@@ -565,6 +593,7 @@
       .card-future, .card-app { grid-column: span 12; }
       .app-mock { gap: 14px; }
       .name-mock { padding: 18px; }
+      .tts-bubble { right: 14px; }
       .nc-name { font-size: 1.35rem; }
       .pillars { grid-template-columns: 1fr; }
       .strengths-grid { grid-template-columns: 1fr; }
@@ -637,7 +666,7 @@
           </div>
 
           <div class="hero-stats">
-            <div><strong>5</strong><span>Released apps</span></div>
+            <div><strong>6</strong><span>Released apps</span></div>
             <div><strong>AI&nbsp;+&nbsp;ML</strong><span>At the core</span></div>
             <div><strong>Privacy-first</strong><span>Local by design</span></div>
           </div>
@@ -934,6 +963,51 @@
             <div class="card-actions">
               <a class="btn btn-primary btn-dl" href="https://github.com/tgi25/ferna-mouse-gestures/releases/latest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download for Windows</a>
               <a class="btn btn-outline btn-dl" href="https://github.com/tgi25/ferna-mouse-gestures" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>View on GitHub</a>
+            </div>
+          </article>
+
+          <!-- Ferna TTS -->
+          <article class="card card-wide reveal">
+            <div class="wide-inner">
+              <div>
+                <div class="card-top">
+                  <div class="icon-tile" style="width:52px;height:52px;border-radius:14px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg>
+                  </div>
+                  <span class="tag tag-win"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.5v7H3zM11.5 4.4 21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zM11.5 12.5H21V21l-9.5-1.4z"/></svg>Windows 10 / 11</span>
+                </div>
+                <h3>Ferna TTS</h3>
+                <p>
+                  A text-to-speech app that sits in your system tray and reads aloud whatever you select, in Word,
+                  PDFs, web pages or email. It handles English and Sinhala side by side, so it suits students,
+                  teachers and anyone who'd rather listen than read.
+                </p>
+                <div class="meta"><span>v1.1.1</span><span>Windows installer</span><span>Free</span></div>
+                <ul class="feature-list">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span>Reads selected text in any app: press <b>Ctrl+Shift+S</b> or click the speak bubble</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>English, Sinhala and mixed text, with Singlish or a native Sinhala voice</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Floating control bar and one-key shortcuts: pause, previous, next, restart</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Pronunciation rules, with Balabolka and .pls dictionary import</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Bluetooth-friendly audio, so the first word is never cut off</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Works offline; nothing you read leaves your PC</li>
+                </ul>
+                <div class="card-actions">
+                  <a class="btn btn-primary btn-dl" href="https://github.com/tgi25/ferna-software/releases/download/ferna-tts-v1.1.1/FernaTTS-Setup-1.1.1.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download for Windows</a>
+                  <a class="btn btn-outline btn-dl btn-doc" href="ferna-tts/install.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3M9 11l2 2 4-4"/></svg>Installation guide</a>
+                  <a class="btn btn-outline btn-dl btn-doc" href="ferna-tts/manual.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>User manual</a>
+                </div>
+              </div>
+
+              <div class="tts-mock" aria-hidden="true">
+                <div class="tts-doc">
+                  <mark>Particle swarm optimisation moves each particle towards the best positions found so far.</mark>
+                  <mark class="now">Each step updates the velocity, then the position.</mark>
+                  <mark class="si" lang="si">අංශු සමූහ ප්‍රශස්තකරණය සරල ක්‍රමයකි.</mark>
+                  The algorithm stops when the swarm converges.
+                </div>
+                <span class="tts-bubble"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg>Speak</span>
+                <div class="tts-bar"><span>⏮</span><span class="on">⏸</span><span>⏭</span><span>↺</span><span class="wave"><i></i><i></i><i></i><i></i></span><span>1.2×</span><span>⏹</span></div>
+              </div>
             </div>
           </article>
 
